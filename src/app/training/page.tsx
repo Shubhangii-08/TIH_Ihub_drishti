@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { FaGraduationCap, FaMoneyBillWave, FaUsers, FaCalendarAlt, FaFileAlt, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGraduationCap, FaMoneyBillWave, FaUsers } from 'react-icons/fa';
 
 export default function Training() {
   return (
@@ -59,7 +59,7 @@ export default function Training() {
                     iHub Drishti Foundation (iHub-Drishti) is a Section-8, Not-for-profit Company, promoted by and at the Indian Institute of Technology Jodhpur under a National Mission on Interdisciplinary Cyber Physical Systems (NM-ICPS) of the Government of India.
                   </p>
                   <p className="leading-relaxed">
-                    iHub-Drishti is a Technology Innovation Hub focused around "Computer Vision (CV), Augmented Reality (AR) and Virtual Reality (VR)".
+                    iHub-Drishti is a Technology Innovation Hub focused around &quot;Computer Vision (CV), Augmented Reality (AR) and Virtual Reality (VR)&quot;.
                   </p>
                 </div>
                 <div className="relative h-64 rounded-lg overflow-hidden">
@@ -186,7 +186,7 @@ export default function Training() {
                   <ul className="space-y-3 text-[#021954]">
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-gray-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      <span>Bachelor's/Master's degree in engineering discipline</span>
+                      <span>Bachelor&apos;s/Master&apos;s degree in engineering discipline</span>
                     </li>
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-gray-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>

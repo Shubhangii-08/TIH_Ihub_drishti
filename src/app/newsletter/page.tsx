@@ -58,13 +58,81 @@ export default function NewsletterPage() {
     document.body.removeChild(link);
   };
 
-  const handleViewFullImage = (imageUrl: string) => {
-    setSelectedImage(imageUrl);
-  };
+  // removed unused handler: handleViewFullImage
 
   const closeFullImage = () => {
     setSelectedImage(null);
   };
+
+  function NewsletterRow({ row }: { row: Newsletter[] }) {
+    const ref = useRef<HTMLDivElement | null>(null);
+    const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+    return (
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 20 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.5 }}
+        className="grid grid-cols-1 md:grid-cols-2 gap-8"
+      >
+        {row.map((newsletter) => (
+          <div
+            key={newsletter.id}
+            className="bg-white border-2 border-white p-4 rounded-lg shadow-lg overflow-hidden group"
+          >
+            <div
+              className="relative w-full"
+              style={{
+                maxWidth: 520,
+                margin: "0 auto",
+                aspectRatio: "635 / 897",
+              }}
+            >
+              <Image
+                src={newsletter.imageUrl}
+                alt={newsletter.title}
+                fill
+                priority={false}
+                className="rounded-md object-cover transition-transform duration-300 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 520px"
+                quality={75}
+              />
+            </div>
+
+            <div className="mt-4 flex items-center justify-between">
+              <div>
+                <h3 className="text-lg font-semibold text-[#021954]">
+                  {newsletter.title}
+                </h3>
+                <p className="text-sm text-gray-600">{newsletter.date}</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedImage(newsletter.imageUrl);
+                  }}
+                  className="bg-white text-[#021954] px-4 py-2 rounded-md font-semibold border hover:bg-gray-50 transition-colors"
+                >
+                  View
+                </button>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleDownloadPdf(newsletter.pdfUrl, newsletter.title);
+                  }}
+                  className="bg-white text-[#021954] px-4 py-2 rounded-md font-semibold border hover:bg-gray-50 transition-colors"
+                >
+                  Download PDF
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </motion.div>
+    );
+  }
 
   return (
     <>
@@ -75,87 +143,10 @@ export default function NewsletterPage() {
           </h1>
           <p className="text-gray-600 mt-2">Explore Our Past Issues</p>
         </div>
-
         <div className="space-y-10">
-          {rows.map((row, rowIdx) => {
-            const ref = useRef<HTMLDivElement | null>(null);
-            const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-            return (
-              <motion.div
-                key={rowIdx}
-                ref={ref}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5 }}
-                className="grid grid-cols-1 md:grid-cols-2 gap-8"
-              >
-                {row.map((newsletter) => (
-                  <div
-                    key={newsletter.id}
-                    className="bg-white border-2 border-white p-4 rounded-lg shadow-lg overflow-hidden group"
-                  >
-                    {/* Aspect-ratio box: 635 / 897 with fixed width control */}
-                    <div
-                      className="relative w-full"
-                      style={{
-                        // Choose one sizing strategy:
-                        // Width-driven card height computed from ratio.
-                        // If you want a fixed card width, tweak maxWidth below.
-                        maxWidth: 520,
-                        margin: "0 auto",
-                        aspectRatio: "635 / 897",
-                      }}
-                    >
-                      <Image
-                        src={newsletter.imageUrl}
-                        alt={newsletter.title}
-                        fill
-                        priority={false}
-                        className="rounded-md object-cover transition-transform duration-300 group-hover:scale-105"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 520px"
-                        quality={75}
-                      />
-                    </div>
-
-                    <div className="mt-4 flex items-center justify-between">
-                      <div>
-                        <h3 className="text-lg font-semibold text-[#021954]">
-                          {newsletter.title}
-                        </h3>
-                        <p className="text-sm text-gray-600">
-                          {newsletter.date}
-                        </p>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        {/* <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            handleViewFullImage(newsletter.imageUrl);
-                          }}
-                          className="bg-white text-[#021954] px-4 py-2 rounded-md font-semibold border hover:bg-gray-50 transition-colors"
-                        >
-                          View
-                        </button> */}
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            handleDownloadPdf(
-                              newsletter.pdfUrl,
-                              newsletter.title
-                            );
-                          }}
-                          className="bg-white text-[#021954] px-4 py-2 rounded-md font-semibold border hover:bg-gray-50 transition-colors"
-                        >
-                          Download PDF
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </motion.div>
-            );
-          })}
+          {rows.map((row, rowIdx) => (
+            <NewsletterRow key={rowIdx} row={row} />
+          ))}
         </div>
       </section>
 

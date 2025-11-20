@@ -39,7 +39,7 @@ export default function SeedSupportProgram() {
           <h3 className="text-xl font-semibold text-[#021954] mb-2">Other Support</h3>
           <ul className="list-disc list-inside text-[#021954] space-y-1 mb-4">
             <li>iHub Drishti also has other various programs for startups and other ventures with great ideas, innovations, and technologies to enable them to survive and grow in the current market.</li>
-            <li>Technical Support from IIT Jodhpur and other partner & premier national & international institute's faculties.</li>
+            <li>Technical Support from IIT Jodhpur and other partner & premier national & international institute&apos;s faculties.</li>
             <li>Incubation support from TISC (Technology Incubation & Startup Centre, IIT Jodhpur) and other relevant Incubators.</li>
             <li>Support in business marketing, commercialization of the product. Support in connecting with government organizations for the data or any other support.</li>
             <li>Support to expand the professional network with potential investors or potential partners.</li>
@@ -49,7 +49,7 @@ export default function SeedSupportProgram() {
           <h3 className="text-xl font-semibold text-[#021954] mb-2">Who Can Apply</h3>
           <ul className="list-disc list-inside text-[#021954] space-y-1 mb-4">
             <li>The company should be incorporated under the Ministry of Corporate Affairs as private limited company</li>
-            <li>The company should be recognized by Startup India as "Startup". If not, then it should meet the eligibility criteria for being recognized as Startup.</li>
+            <li>The company should be recognized by Startup India as &quot;Startup&quot;. If not, then it should meet the eligibility criteria for being recognized as Startup.</li>
             <li>Preference shall be given for: Technology business products, Technology business products with considerable potential for the social impact, Startups having any paid customers at present, Startups having any other angel investors onboard till date.</li>
           </ul>
           {/* <h3 className="text-xl font-semibold text-[#021954] mb-2">How to Apply</h3>

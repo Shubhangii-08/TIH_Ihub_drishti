@@ -113,55 +113,59 @@ export default function GalleryPage() {
     setSelectedImage(null);
   };
 
+  function GalleryRow({ row, idx }: { row: GalleryItem[]; idx: number }) {
+    const ref = useRef<HTMLDivElement | null>(null);
+    const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+    return (
+      <motion.div
+        ref={ref}
+        key={idx}
+        className="flex flex-col md:flex-row gap-10 justify-center"
+        initial={{ x: -200, opacity: 0 }}
+        animate={isInView ? { x: 0, opacity: 1 } : { x: -200, opacity: 0 }}
+        transition={{ duration: 0.7, delay: 0.2 }}
+      >
+        {row.map((item: GalleryItem, i: number) => (
+          <div
+            key={i}
+            className="
+              w-full md:w-[800px]
+              aspect-video
+              bg-white border-2 border-white p-4 rounded-lg
+              shadow-lg flex items-center justify-center
+              overflow-hidden group relative cursor-pointer
+            "
+            onClick={() => handleViewFullImage(item.imageUrl)}
+          >
+            <Image
+              src={item.imageUrl}
+              alt={`Gallery Image ${idx * 2 + i + 1}`}
+              fill
+              className="object-cover rounded-lg transition-transform duration-300 group-hover:scale-125"
+              loading="lazy"
+              quality={75}
+            />
+            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <p className="text-white text-xl font-semibold text-center px-4">
+                {item.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </motion.div>
+    );
+  }
+
   return (
     <>
       <main className="min-h-screen bg-white py-12 px-4 sm:px-6 lg:px-8 text-[#021954]">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl font-bold text-[#021954] mb-8 text-center">Gallery</h1>
           <div className="flex flex-col gap-10">
-            {rows.map((row, idx) => {
-              const ref = useRef(null);
-              const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-              return (
-                <motion.div
-                  ref={ref}
-                  key={idx}
-                  className="flex flex-col md:flex-row gap-10 justify-center"
-                  initial={{ x: -200, opacity: 0 }}
-                  animate={isInView ? { x: 0, opacity: 1 } : { x: -200, opacity: 0 }}
-                  transition={{ duration: 0.7, delay: 0.2 }}
-                >
-                  {row.map((item: GalleryItem, i: number) => (
-                    <div
-                      key={i}
-                      className="
-                        w-full md:w-[800px]
-                        aspect-video
-                        bg-white border-2 border-white p-4 rounded-lg
-                        shadow-lg flex items-center justify-center
-                        overflow-hidden group relative cursor-pointer
-                      "
-                      onClick={() => handleViewFullImage(item.imageUrl)}
-                    >
-                      <Image
-                        src={item.imageUrl}
-                        alt={`Gallery Image ${idx * 2 + i + 1}`}
-                        fill
-                        className="object-cover rounded-lg transition-transform duration-300 group-hover:scale-125"
-                        loading="lazy"
-                        quality={75}
-                      />
-                      <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <p className="text-white text-xl font-semibold text-center px-4">
-                          {item.description}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </motion.div>
-              );
-            })}
+            {rows.map((row, idx) => (
+              <GalleryRow key={idx} row={row} idx={idx} />
+            ))}
           </div>
         </div>
       </main>

@@ -25,7 +25,7 @@ export default function PrayasProgram() {
             iHub Drishti Foundation, IIT-Jodhpur initiates this program to support the young and aspiring technology entrepreneurs. It will nurture and support innovations and ideas in the fields of Computer Vision, Augmented Reality & Virtual Reality.
           </p>
           <p className="text-[#021954] mb-4">
-            The program focuses on the Idea-to-prototyping journey of young startups/innovators. The individuals' innovators or startups in the idea-prototype stage can benefit from this scheme with a maximum grant of up to INR 6 Lakhs and access to the iHub Drishti labs. The duration of the engagement can range from 6-18 months.
+            The program focuses on the Idea-to-prototyping journey of young startups/innovators. The individuals&apos; innovators or startups in the idea-prototype stage can benefit from this scheme with a maximum grant of up to INR 6 Lakhs and access to the iHub Drishti labs. The duration of the engagement can range from 6-18 months.
           </p>
           <p className="text-[#021954] mb-4">
             The program aims to attract a large number of young innovators and entrepreneurs to come forward to try out their ideas. Eventually, such an approach would bring in many potential ideas into the incubation programs, thereby increasing the flow of quality incubators to the incubator.
@@ -34,14 +34,14 @@ export default function PrayasProgram() {
           <ul className="list-disc list-inside text-[#021954] space-y-1 mb-4">
             <li>Guidance from successful tech-entrepreneurs on the business concept, strategy, and insight into specific industries or markets from the domain experts.</li>
             <li>Co-working spaces and accommodation (as per the hostel availability) for developing the idea into a marketable product.</li>
-            <li>Technical Support from IIT Jodhpur and other partner & premier national & international institute's faculties.</li>
+            <li>Technical Support from IIT Jodhpur and other partner & premier national & international institute&apos;s faculties.</li>
             <li>Incubation support from TISC (Technology Incubation & Startup Centre, IIT Jodhpur) and other relevant Incubators.</li>
             <li>Guidance & support from various domain experts and industry partners.</li>
             <li>Access to dedicated labs for Augmented Reality & Virtual Reality lab, Vision base Autonomous lab, Data Collection and Annotation Lab, Real-time Computer Vision and Sensing Lab, Trustable Visual Intelligence Lab & Visual Computing Lab at TIH iHub Drishti.</li>
           </ul>
           <h3 className="text-xl font-semibold text-[#021954] mb-2">Who Can Apply</h3>
           <ul className="list-disc list-inside text-[#021954] space-y-1 mb-4">
-            <li>The individuals' innovators or startups are in the idea-prototype stage.</li>
+            <li>The individuals&apos; innovators or startups are in the idea-prototype stage.</li>
             <li>The Individual having innovative ideas and a strong desire to become an entrepreneur.</li>
             <li>Students in full-time programs in educational institutes can apply with a NOC from their institution. The permission should state that:
               <ul className="list-disc ml-6">

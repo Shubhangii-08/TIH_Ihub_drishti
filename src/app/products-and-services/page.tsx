@@ -1,7 +1,6 @@
 "use client";
 
 import Image from 'next/image';
-import { FaLaptopCode, FaGraduationCap, FaBrain, FaVrCardboard } from 'react-icons/fa'; // Example icons, replace with actual images
 
 export default function ProductsAndServices() {
   const products = [

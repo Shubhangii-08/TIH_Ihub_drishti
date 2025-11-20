@@ -143,7 +143,6 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/navbar";
 import { projectCategories, Project } from "./projectData";
-import { useEffect, useState } from "react";
 
 const ProjectCard = ({ project }: { project: Project }) => {
   const statusColor =
@@ -195,8 +194,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
 };
 
 export default function Page() {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+  // mounted state removed because it was unused
 
   return (
     <main className="min-h-screen bg-gray-50">

@@ -25,7 +25,7 @@ export default function EIRProgram() {
             iHub Drishti Foundation, IIT-Jodhpur initiates this program to support the entrepreneurs. It will nurture and support innovations and ideas in the fields of Computer Vision, Augmented Reality & Virtual Reality.
           </p>
           <p className="text-[#021954] mb-4">
-            The program offers an entrepreneurship fellowship to a budding entrepreneur who has a passion for technology and/or has a promising technology business idea. Further, the EIR program will provide enormous opportunities for young entrepreneurs to expand their networks while working in the innovative environment of IIT Jodhpur and other premier institutes and get critical feedback on their ventures to promote their entrepreneurial aspirations. In this way, iHub's EIR program considerably minimizes the risk involved in pursuing start-ups and partially setting off the opportunity costs of high-paying jobs.
+            The program offers an entrepreneurship fellowship to a budding entrepreneur who has a passion for technology and/or has a promising technology business idea. Further, the EIR program will provide enormous opportunities for young entrepreneurs to expand their networks while working in the innovative environment of IIT Jodhpur and other premier institutes and get critical feedback on their ventures to promote their entrepreneurial aspirations. In this way, iHub&apos;s EIR program considerably minimizes the risk involved in pursuing start-ups and partially setting off the opportunity costs of high-paying jobs.
           </p>
           <p className="text-[#021954] mb-4">
             Grant support of up to INR 30,000 per month for 6-12 months post proper screening and evaluation.
@@ -34,7 +34,7 @@ export default function EIRProgram() {
           <ul className="list-disc list-inside text-[#021954] space-y-1 mb-4">
             <li>Guidance from successful tech-entrepreneurs on the business concept, strategy, and insight into specific industries or markets from the domain experts</li>
             <li>Possibility of getting funded (up to 50 lakhs) by iHUB Drishti after the successful completion of the EIR program and subsequent screening and evaluation as per funding norms. Co-working spaces and accommodation (as per the hostel availability) for developing the idea into a marketable product.</li>
-            <li>Technical Support from IIT Jodhpur and other partner & premier national & international institute's faculties.</li>
+            <li>Technical Support from IIT Jodhpur and other partner & premier national & international institute&apos;s faculties.</li>
             <li>Incubation support from TISC (Technology Incubation & Startup Centre, IIT Jodhpur) and other relevant Incubators</li>
             <li>Support in business marketing, commercialization of the product. Support in connecting with government organizations for the data or any other support.</li>
             <li>Support to expand the professional network with potential investors or potential partners</li>
@@ -43,7 +43,7 @@ export default function EIRProgram() {
           </ul>
           <h3 className="text-xl font-semibold text-[#021954] mb-2">Who Can Apply</h3>
           <ul className="list-disc list-inside text-[#021954] space-y-1 mb-4">
-            <li>EIR applicant should be a citizen of India. An Indian citizen is defined as one who owns a government-approved proof of nationality such as a valid passport, voter's id, Aadhaar card etc.</li>
+            <li>EIR applicant should be a citizen of India. An Indian citizen is defined as one who owns a government-approved proof of nationality such as a valid passport, voter&apos;s id, Aadhaar card etc.</li>
             <li>Applicant should have completed a minimum of 4 years of formal full-time undergraduate/post-graduate education in sciences or engineering towards one or more degree programs or Completed 3 years degree or diploma program in sciences or engineering along with 2 years of full-time work experience post-degree or diploma.</li>
           </ul>
           {/* <h3 className="text-xl font-semibold text-[#021954] mb-2">How to Apply</h3>

@@ -13,17 +13,16 @@ function App() {
   const mainRef = useRef(null);
   const sceneRef = useRef(null);
   const [progress, setProgress] = useState(0);
-  const [scrollProgress, setScrollProgress] = useState(0);    
 
   useEffect(() => {
     gsap.timeline({
-      scrollTrigger: {
+        scrollTrigger: {
         trigger: mainRef.current,
         start: "top top",
         end: "bottom bottom",
         scrub: 1,
         onUpdate: (self) => {
-          setScrollProgress(self.progress)     
+          setProgress(self.progress);
         }
       }
     })

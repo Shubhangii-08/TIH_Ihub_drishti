@@ -191,7 +191,7 @@
 
 import React, { Suspense, useRef, useEffect } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { useScroll, ScrollControls, useGLTF } from '@react-three/drei';
+import { ScrollControls, useGLTF } from '@react-three/drei';
 import { Model } from '@/components/Model';
 import type { Group } from 'three';
 import { gsap } from 'gsap';
@@ -212,7 +212,6 @@ function Scene({
   sectionHeight: number;
 }) {
   const group = useRef<Group>(null);
-  const scroll = useScroll();
   const { size } = useThree();
 
   useFrame(() => {

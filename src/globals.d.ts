@@ -10,7 +10,7 @@ declare namespace JSX {
         'camera-controls'?: boolean | string;
         'auto-rotate'?: boolean | string;
         style?: React.CSSProperties;
-        [key: string]: any;
+        [key: string]: unknown;
       };
     }
   }

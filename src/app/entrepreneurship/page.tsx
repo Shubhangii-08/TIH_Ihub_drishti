@@ -1,8 +1,7 @@
 "use client";
 
-import { FaRocket, FaUsers, FaLightbulb, FaTrophy, FaSeedling, FaUserTie } from "react-icons/fa";
+import { FaRocket, FaLightbulb, FaSeedling, FaUserTie } from "react-icons/fa";
 import Link from "next/link";
-import Image from "next/image";
 
 const programs = [
   {

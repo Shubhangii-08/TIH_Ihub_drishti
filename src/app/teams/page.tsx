@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+// removed unused useState import
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 

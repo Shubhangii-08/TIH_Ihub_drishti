@@ -1,6 +1,6 @@
 "use client";
 
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaFacebook } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin } from 'react-icons/fa';
 
 export default function Contact() {
   return (
@@ -62,7 +62,7 @@ export default function Contact() {
                     ["07", "Web Admin and Business Development Executive", "0291 280 2246"],
                     ["08", "Research Engineer", "0291 280 2247"],
                     ["09", "Scientific Officer", "0291 280 2248"],
-                  ].map(([no, name, phone], idx) => (
+                  ].map(([no, name, phone]) => (
                     <tr key={no} className={`border-b last:border-b-0 hover:bg-gray-50 transition`}>
                       <td className="px-6 py-3">{no}</td>
                       <td className="px-6 py-3">{name}</td>
